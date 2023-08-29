@@ -5,9 +5,11 @@ import { EventType } from '../../../types'
 import { useState, useEffect } from 'react'
 import { getDayAndMonth } from '@/helpers'
 import placeHolder from '@/assets/eventPlaceholder.jpeg'
+import { useRouter } from 'next/router'
 
 const UpcomingEvent = ({event} : {event : EventType}) => {
 
+  const router = useRouter()
 
   const [days, setDays] = useState(24);
   const [hours, setHours] = useState(12);
@@ -115,7 +117,10 @@ const UpcomingEvent = ({event} : {event : EventType}) => {
 
           </div>
         </div>
-        <button className={styles.buyTickets}>
+        <button 
+          onClick={() => {
+            event.fields.eventPhoto.fields.description ? window.open(event.fields.eventPhoto.fields.description, "_blank") : router.push('/#contact')}}
+          className={styles.buyTickets}>
           CUMPĂRĂ BILETE
         </button>
       </div>

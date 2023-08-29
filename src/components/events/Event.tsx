@@ -26,7 +26,7 @@ const Event = ({event} : {event : EventType}) => {
         }}
         className={styles.eventImage}
         alt='older event'
-        src={event.fields.eventPhoto ? 'https://'+ event.fields.eventPhoto.fields.file.url : eventPlaceholder}
+        src={event.fields.eventPhoto ?  "https:"+ event.fields.eventPhoto.fields.file.url : eventPlaceholder}
       />
       <div className={styles.cardDetails}>
         <h4>

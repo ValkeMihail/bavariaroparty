@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100&family=Roboto+Condensed:wght@300&family=Major+Mono+Display&family=Orbitron&family=Playfair+Display&family=Rajdhani:wght@300&display=swap');
+body{
+    background: #fafafa;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    width: 99vw;
+    font-size: 1vw;
+}
+
+.footerContainer{
+  margin-bottom: 0 !important;
+  height: fit-content !important;
+}
+
+.control-next::before{
+  border-left: 12px solid #f3c65d !important;
+}
+
+.control-prev::before{
+  border-right: 12px solid #f3c65d !important;
+}
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow{
+  opacity: 1 !important;
+}
+
+.headingText{
+    font-size: 2rem;
+    margin-left: 0;
+    margin-top: 15rem;
+    font-family: "Major Mono Display" , sans-serif;
+    margin-bottom: 3rem;
+    text-align: left;
+    width: 100%;
+    
+}
+
+*{
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 1200px; 
+    margin: 0 auto;
+  }
+  main {
+    width: 100%;
+  }
+  main nav{
+    width: 100% !important;
+  }
+  main nav li{
+    font-size: 2rem;
+  }
+
+  .header{
+    width: 100% !important;
+  }
+}
+
+::selection{
+    background: #333;
+    color: #fafafa;
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.button{
+    color: #333;
+    background: #fafafa;
+    border: none;
+    padding: 0.5vw 1vw;
+    
+    width: 50%;
+    font-size: 1.2rem !important;
+
+    height: 100%;
+}
+
+
+
+.hoverable{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.hoverable:hover{
+    transform: scale(1.05);
+}
+
+
+@media  screen and (max-width: 800px) {
+  .headingText{
+    margin-top: 5vh;
+  }
+
+  #thanksMessage{
+    font-size: 1rem;
+    margin: 20rem 5rem 15rem 5rem;
+  }
+
+  #contact{
+    margin-top: 2rem !important;
+  }
+}
